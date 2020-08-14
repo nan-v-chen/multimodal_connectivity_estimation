@@ -24,11 +24,14 @@ logger.setLevel('DEBUG')
 warnings.filterwarnings("ignore")
 
 # read the subject ids
-workbook = xlrd.open_workbook("filtered.xlsx", 'r')
+'''workbook = xlrd.open_workbook("filtered.xlsx", 'r')
 sheet_MDD = workbook.sheet_by_index(0)
 sheet_HC = workbook.sheet_by_index(1)
 subject_MDD = sheet_MDD.col_values(2)[1:]
-subject__HC = sheet_HC.col_values(2)[1:]
+subject__HC = sheet_HC.col_values(2)[1:]'''
+# sample subjects
+subject_MDD = ["Sub_001", "Sub_002", "Sub_003", "Sub_004", "Sub_005", "Sub_007", "Sub_008", "Sub_009", "Sub_010", "Sub_011"]
+subject__HC = ["Sub_101", "Sub_102", "Sub_103", "Sub_104", "Sub_105", "Sub_106", "Sub_107", "Sub_108", "Sub_109", "Sub_110"]
 subjectList = subject_MDD + subject__HC
 
 
